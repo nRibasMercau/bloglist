@@ -2,8 +2,8 @@ POST http://localhost:3003/api/blogs
 Content-Type: application/json
 
 {
-    "title": "Personalization Pyramid: A Framework for Designing with User Data", 
-    "author": "Colin Eagan, Jeffrey MacIntyre",
-    "url": "https://alistapart.com/article/personalization-pyramid/",
-    "likes": 140
+    "title": "Voice Content and Usability", 
+    "author": "Preston So",
+    "url": "https://alistapart.com/article/voice-content-and-usability/",
+    "likes": 415
 }
