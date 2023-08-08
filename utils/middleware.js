@@ -20,15 +20,12 @@ const tokenExtractor = (request, response, next) => {
     next() 
 }
 
-'''
 const userExtractor = (request, response, next) => {
     const authorization = request.get('authorization')
     if (authorization && authorization.startsWith('bearer ')) {
         
     }
 }
-'''
-
 
 const errorHandler = (error, request, response, next) => {
     logger.error(error.message)
