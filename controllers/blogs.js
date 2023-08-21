@@ -48,9 +48,10 @@ blogsRouter.post('/', async (request, response) => {
 		response.status(400).end()
 	} else {
    		const savedBlog = await blog.save()
-        user.blogs = user.blogs.concat(savedBlog.id)
-        await user.save()
-		response.status(201).json(savedBlog)
+      user.blogs = user.blogs.concat(savedBlog.id)
+      await user.save()
+      await savedBlog.populate('user', { username: 1, name: 1 })
+		  response.status(201).json(savedBlog)
 	} 
 })
 
